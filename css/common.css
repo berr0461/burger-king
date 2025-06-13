@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+:root {
+  --main-font: 'Arita-dotum', sans-serif;
+  --sub-font: "DM Serif Display", serif;
+  --main-color: #758246;
+  --sub-color: #a89079;
+  --base-color: #67625e;
+}
+
+/* 공통사항 */
+body{font-family: 'Arita-dotum', sans-serif; font-size: 1.6rem; line-height: 1.5; color: #333;}
+#wrap{min-width: 320px;}
+.inner{max-width: 1700px; padding: 0 5%; margin: 0 auto;}
+
+
+/* header */
+header{position: absolute; top: 0; left: 0; width: 100%; padding: 10px 0 0; z-index: 3;}
+header .inner{display: flex; justify-content: space-between; align-items: center; max-width: 100%;}
+
+header h1 a{display: block; width: 116px; height: 40px; font-size: 0; color: transparent;}
+
+header nav{margin: 0 auto 0 100px;}
+header nav .gnb{display: flex;}
+header .gnb > li{position: relative;}
+header .gnb > li::before{content: ''; display: block; width: 8px; height: 8px; background-color: var(--main-color); border-radius: 50%; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);transition: all 0.5s; opacity: 0;} 
+header .gnb > li:hover::before{top: 0; opacity: 1;}
+header .gnb > li > a {color: #fff; display: block; padding: 20px 40px; font-size: 2rem;}
+
+header nav .gnb .depth2{display: flex; position: absolute; width: 500px; z-index: 99;}
+header nav .gnb .depth2 li a{display: block; padding: 15px; color:#fff; transition: all 0.5s;}
+header .gnb .depth2 li a:hover{color:#f4dc9c;}
+
+header .depth2-bg{width: 100%; height: 55px; background: #758246; position: absolute; left: 0; z-index: 98;}
+
+header .util{display: flex; align-items: center; gap: 20px; color: #000;}
+header .util .btn-search{width: 24px; height: 24px; border: 0;  color: #000; background-color: #fff; cursor: pointer;}
+header .util .btn-menu{width: 24px; height: 24px; border: 0;  color: #000; background-color: #fff; cursor: pointer;}
+
+header.active{background: #fff;}
+header.active nav .gnb > li > a{color: #333;}
+header.active nav .gnb > li > a:hover{color: var(--main-color)}
+
+.mgnb-wrap{width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999; padding: 100px 5%; text-align: center; overflow: auto;}
+.mgnb-wrap .tit{padding: 0 0 100px;}
+.mgnb-wrap .mgnb{display: flex; flex-wrap: wrap;}
+.mgnb-wrap .mgnb > li{width: calc(100% / 4); margin: 0 0 50px;}
+.mgnb-wrap .mgnb > li > a{display: block; font-size: 3rem; color:#fff; padding: 0 0 10px;}
+.mgnb-wrap .mgnb > li > a::before{content: ''; display: block; width: 8px; height: 8px; background-color: #fff; border-radius: 50%; margin: 0 auto 10px; opacity: 0.5;}
+header .gnb > li .depth2 li:hover a{color: var(--main-color);}
+.mgnb-wrap .mdepth2 li a{display: block; padding: 5px 0; color: #fff; font-size: 2rem; opacity: 0.5;}
+.mgnb-wrap .mgnb-close{border: 0; padding: 10px; background-color: #000; color: #fff; cursor: pointer; position: absolute; top: 0; right: 0; font-size: 2.5rem;}
+
+
+/* search */
+.search{position: absolute; width: 100%; left: 0; background-color: #fff; border-top: 1px solid #ddd; text-align: center; padding: 100px 0; z-index: 100;}
+.search div{display: inline-block; border-radius: 50px; background-color: #eee; overflow: hidden; width: 30%; min-width: 260px;}
+.search input[type="text"]{font-family: var(--main-font); background-color: #eee; width: calc(100% - 60px); height: 50px; font-size: 1.6rem; padding: 0 20px;}
+.search i{width: 50px; height: 50px; cursor: pointer; padding: 10px; color: #000; font-size: 30px;}
+.search .search-btn{font-weight: 0; color: transparent; width: 50px; height: 50px; cursor: pointer;}
+
+@media (max-width:1200px) {
+  header h1 a{width: 80px; height: 28px;}
+  header .gnb {display: none;}
+  header .util > :not(.btn-menu){display: none;}
+}
+
+@media (max-width:768px) {
+  .mgnb-wrap{padding: 50px 5%;}
+  .mgnb-wrap .tit{padding: 0 0 50px;}
+  .mgnb-wrap .mgnb{flex-direction: column;}
+  .mgnb-wrap .mgnb > li{width: 100%; margin: 0 0 30px;}
+  .mgnb-wrap .mgnb > li:last-child{margin-bottom: 100px;}
+  .mgnb-wrap .mgnb .mdepth2{display: none;}
+  .mgnb-wrap .mgnb > li > a{font-size: 2.5rem;}
+  .mgnb-wrap .mgnb .mdepth2 li a{font-size: 1.6rem;}
+}

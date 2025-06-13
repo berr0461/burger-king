@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+:root {
+  --main-font: 'Arita-dotum', sans-serif;
+  --sub-font: "DM Serif Display", serif;
+  --main-color: #758246;
+  --sub-color: #a89079;
+  --base-color: #67625e;
+}
+
+/* sub */
+.sub-visual .inner{padding: 150px 0;}
+.sub-visual h2{font-size: 4rem; text-align: center; color: #fff;}
+
+.sub-visual .bg-brand{background: url(../images/sub/sv_brand.png) no-repeat center / cover; }
+.breadcrumbs{padding: 20px 0 0; display: flex; gap: 40px; justify-content: center; align-items: flex-end;}
+.breadcrumbs li:not(:first-child)::before{content: ''; display: block; width: 6px; height: 6px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: translate(-25px,15px) rotate(45deg);}
+.breadcrumbs li a{color: #fff;}

@@ -16,3 +16,8 @@
 .breadcrumbs{padding: 20px 0 0; display: flex; gap: 40px; justify-content: center; align-items: flex-end;}
 .breadcrumbs li:not(:first-child)::before{content: ''; display: block; width: 6px; height: 6px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: translate(-25px,15px) rotate(45deg);}
 .breadcrumbs li a{color: #fff;}
+
+.lnb{background-color: rgba(0,0,0,0.3); backdrop-filter: blur(10px);}
+.lnb ul{display: flex; justify-content: center;}
+.lnb ul li a{display: block; padding: 20px 100px; color: #fff;}
+.lnb ul li.active a{background-color: #fff; color: #000;}

@@ -21,3 +21,31 @@
 .lnb ul{display: flex; justify-content: center;}
 .lnb ul li a{display: block; padding: 20px 100px; color: #fff;}
 .lnb ul li.active a{background-color: #fff; color: #000;}
+
+@media (max-width:1024px) {
+  .sub-visual .inner{padding: 100px 0;}
+  .sub-visual h2{font-size: 3rem;}
+  .lnb ul li a{padding: 15px;}
+}
+
+.contents{padding: 150px 0;}
+.contents h3{display: none;}
+
+
+@media (max-width:1024px) {
+  .contents{padding: 100px 0;}
+}
+
+
+/*intro*/
+.intro{text-align: center;}
+.intro .story{margin-bottom: 50px;}
+.intro .story figcaption h4{margin: 50px 0; font-size: 3rem;}
+.intro .story figcaption p{margin-bottom: 20px;}
+
+@media (max-width:470px) {
+  .intro .story figcaption h4{font-size: 2rem;}
+  .intro .story figure img{width: 100%;}
+}
+
+

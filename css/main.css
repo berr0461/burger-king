@@ -41,6 +41,7 @@ header .mgnb-wrap .mgnb-close{position: absolute; right: 20px; top: 20px; width:
 }
 
 
+
 /* main 공통 */
 main h2{text-transform: capitalize; font-size: 7rem; font-family: var(--sub-font);}
 main .btn-more a{display: inline-block; padding: 10px 100px; background: #000; color: #fff; font-size: 1.8rem; font-weight: 700; border-radius: 50px; transition: all 0.5s;}
@@ -171,7 +172,7 @@ footer .inner{display: flex; justify-content: space-between; flex-wrap: wrap; ga
 footer .f-link{display: flex; gap: 10px 20px; flex-wrap: wrap;}
 
 footer .footer-sns{display: flex; gap: 10px;}
-footer address{margin: 30px 0; color:#999;}
+footer address{margin: 0; color:#999;}
 footer .copy{color: #ccc;}
 
 @media (max-width : 768px) {
